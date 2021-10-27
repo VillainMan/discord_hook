@@ -290,6 +290,7 @@ app.post('/', async function (req, res) {
           "content": message,
       }})).end();
     }else if(jsan.data.name=="reset"){
+      let user = jsan.member.user.id;
       if(!jsan.member.roles.includes("784299787473649724") && !(user == "583609260110381059")){
         return res.send(JSON.stringify({"type": 4,"data": {
             "content": "You must be an admin to reset someone <:Moyaifacepalm:885852804961419274>!"
