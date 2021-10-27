@@ -428,7 +428,7 @@ function deletecommand(id){
 
 // deletecommand("902755246185525268");
 }
-let server = app.listen(8000, function () {
+let server = app.listen(process.env.PORT || 3000, function () {
   let host = server.address().address;
   let port = server.address().port;
 
