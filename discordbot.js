@@ -264,6 +264,7 @@ app.post('/', async function (req, res) {
       }})).end();
     }else if(jsan.data.name=="runs"){
       const data = JSON.parse(fs.readFileSync("peple.json"));
+      console.log("runcommand "+battu.includes(jsan.member.user.id));
       let message = `**Runs Leaderboard${battu.includes(jsan.member.user.id)?` (you are rank #${battu.indexOf(jsan.member.user.id)+1})`:""}:**\n`;
       for(let i = 0; i < battu.length; i++){
         message+=`${i+1}. ${data[battu[i]]["name"]}: ${data[battu[i]]["runs"]} runs\n`;
