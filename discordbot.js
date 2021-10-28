@@ -106,11 +106,11 @@ app.post('/', async function (req, res) {
             "content": "You sussy baka, you can't provide negative numbers as values! <:LMFAO:879206667747733554>"
         }})).end();
       }
-      if(options[1].value < options[3].value){
-        return res.send(JSON.stringify({"type": 4,"data": {
-            "content": "How can your high score be more than your runs? You lookin real sus there <:RoshikMoment:887204117850763264>."
-        }})).end();
-      }
+      // if(options[1].value < options[3].value){
+      //   return res.send(JSON.stringify({"type": 4,"data": {
+      //       "content": "How can your high score be more than your runs? You lookin real sus there <:RoshikMoment:887204117850763264>."
+      //   }})).end();
+      // }
       let sussy = false;
       if(data[user])sussy = true;
       data[user] = {"name": options[0].value, "runs": options[1].value, "wicks": options[2].value, "high": options[3].value};
@@ -157,11 +157,11 @@ app.post('/', async function (req, res) {
             "content": "You sussy baka, you can't provide negative numbers or decimals as values! <:LMFAO:879206667747733554>"
         }})).end();
       }
-      if(options[0].value == "high" && Number(options[1].value) > data[user].runs){
-        return res.send(JSON.stringify({"type": 4,"data": {
-            "content": "How can your high score be more than your runs? You lookin real sus there <:RoshikMoment:887204117850763264>."
-        }})).end();
-      }
+      // if(options[0].value == "high" && Number(options[1].value) > data[user].runs){
+      //   return res.send(JSON.stringify({"type": 4,"data": {
+      //       "content": "How can your high score be more than your runs? You lookin real sus there <:RoshikMoment:887204117850763264>."
+      //   }})).end();
+      // }
       if(options[0].value == "name")
         data[user]["name"] = options[1].value;
       else
