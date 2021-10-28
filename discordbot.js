@@ -353,7 +353,7 @@ app.post('/', async function (req, res) {
       const data = JSON.parse(fs.readFileSync("peple.json"));
       console.log(data);
       return res.send(JSON.stringify({"type": 4,"data": {
-          "content": `\`\`\`\n${data}\n\`\`\``,
+          "content": `\`\`\`\n${JSON.stringify(data)}\n\`\`\``,
           "allowed_mentions": {"parse": []}
       }})).end();
     }
