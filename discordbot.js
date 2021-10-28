@@ -349,6 +349,13 @@ app.post('/', async function (req, res) {
             "allowed_mentions": {"parse": []}
         }})).end();
       }
+    }else if(jsan.data.name=="jsonlog"){
+      const data = JSON.parse(fs.readFileSync("peple.json"));
+      console.log(data);
+      return res.send(JSON.stringify({"type": 4,"data": {
+          "content": `\`\`\`\n${data}\n\`\`\``,
+          "allowed_mentions": {"parse": []}
+      }})).end();
     }
     return res.send(JSON.stringify({
       "type": 4,
@@ -385,21 +392,15 @@ function updateList(array, item, thang){
 
 {
 async function makecommand(){
-  let bruh = await fetch("https://discord.com/api/v8/applications/873093661276123167/guilds/783891723045568532/commands",
+  let bruh = await fetch("https://discord.com/api/v8/applications/873093661276123167/guilds/738263333517394030/commands",
     {
       "method": "POST",
       "headers": {'Content-Type': 'application/json',
         "Authorization": "Bot ODczMDkzNjYxMjc2MTIzMTY3.YQzZ1g.qK20gJMEa2nRP7nKyaWxJmaZaJE"},
       "body": JSON.stringify({
-        "name": "ban-toggle",
+        "name": "jsonlog",
         "type": 1,
-        "description": "Ban (or unban if they are already banned) a user from using this bot.",
-        "options": [{
-            "name": "user",
-            "description": "Which user do you want to ban or unban?",
-            "type": 6,
-            "required": true
-        }]
+        "description": "Log the json storage"
         // "description": "Testing command" /guilds/738263333517394030
       })
     });
@@ -427,7 +428,7 @@ function deletecommand(id){
   });
 }
 
-// deletecommand("902755246185525268");
+// deletecommand("903146548890845204");
 }
 let server = app.listen(process.env.PORT || 3000, function () {
   let host = server.address().address;

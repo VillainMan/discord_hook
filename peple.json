@@ -1,1 +1,11 @@
-{"ban":[]}
+{
+"ban":[],
+"850018748101951499": {"name": "Roshik", "runs": 4050, "wicks": 168, "high": 122},
+"899224069893918761": {"name": "Manish", "runs": 3841, "wicks": 156, "high": 99},
+"789028794681131018": {"name": "Adithya", "runs": 3827, "wicks": 107, "high": 164},
+"815445558402744340": {"name": "Krishnan", "runs": 1535, "wicks": 63, "high": 251},
+"830379702802710568": {"name": "Abhik", "runs": 1062, "wicks": 84, "high": 56},
+"888271171458580523": {"name": "Vishruth", "runs": 528, "wicks": 26, "high": 78},
+"737187649911128114": {"name": "Pranav Raj", "runs": 106, "wicks": 13, "high": 30},
+"774569208305811466": {"name": "Vishal", "runs": 2604, "wicks": 177, "high": 112}
+}

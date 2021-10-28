@@ -170,3 +170,12 @@
   "description": "Get the highscore leaderboard."
   // "description": "Testing command" /guilds/738263333517394030
 }
+
+903147048377933874
+
+{
+  "name": "jsonlog",
+  "type": 1,
+  "description": "Log the json storage"
+  // "description": "Testing command" /guilds/738263333517394030
+}
