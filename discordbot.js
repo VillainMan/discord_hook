@@ -82,7 +82,7 @@ app.post('/', async function (req, res) {
       let user = jsan.member.user.id;
       const options = jsan.data.options;
       if(options[4]){
-        if(!jsan.member.roles.includes("784299787473649724")&& !(user == "583609260110381059")){
+        if(!jsan.member.roles.includes("784299787473649724")&& !(user == "583609260110381059") && user!=options[4].value){
           return res.send(JSON.stringify({"type": 4,"data": {
             "content": "You must be an admin to setup someone else <:Moyaifacepalm:885852804961419274>!"
           }})).end();
@@ -133,7 +133,7 @@ app.post('/', async function (req, res) {
       let user = jsan.member.user.id;
       const options = jsan.data.options;
       if(options[2]){
-        if(!jsan.member.roles.includes("784299787473649724")&& !(user == "583609260110381059")){
+        if(!jsan.member.roles.includes("784299787473649724")&& !(user == "583609260110381059") && user!=options[2].value){
           return res.send(JSON.stringify({"type": 4,"data": {
               "content": "You must be an admin to edit someone else <:Moyaifacepalm:885852804961419274>!"
           }})).end();
@@ -177,7 +177,7 @@ app.post('/', async function (req, res) {
       let user = jsan.member.user.id;
       const options = jsan.data.options;
       if(options[2]){
-        if(!jsan.member.roles.includes("784299787473649724")&& !(user == "583609260110381059")){
+        if(!jsan.member.roles.includes("784299787473649724")&& !(user == "583609260110381059") && user!=options[2].value){
           return res.send(JSON.stringify({"type": 4,"data": {
               "content": "You must be an admin to update someone else <:Moyaifacepalm:885852804961419274>!"
           }})).end();
@@ -351,10 +351,10 @@ app.post('/', async function (req, res) {
         }})).end();
       }
     }else if(jsan.data.name=="jsonlog"){
-      const data = JSON.parse(fs.readFileSync("peple.json"));
+      const data = fs.readFileSync("peple.json");
       console.log(data);
       return res.send(JSON.stringify({"type": 4,"data": {
-          "content": `\`\`\`\n${JSON.stringify(data)}\n\`\`\``,
+          "content": `\`\`\`\n${data}\n\`\`\``,
           "allowed_mentions": {"parse": []}
       }})).end();
     }
